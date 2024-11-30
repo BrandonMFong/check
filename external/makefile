@@ -21,7 +21,7 @@ clean-libs:
 setup-libs:
 	mkdir -p $(LIBS_BIN_PATH)
 
-LIBS = bflibc bflibcpp bfnet bftest
+LIBS = bflibc bftest
 LIBS_ASSETS = libs/bin/debug libs/bin/release
 build-libs: setup-libs $(LIBS)
 	cp -afv $(LIBS_ASSETS) $(LIBS_BIN_PATH)
