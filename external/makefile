@@ -65,9 +65,9 @@ build-openssl-intel:
 	&& ../../openssl/Configure darwin64-x86_64 \
 	CPPFLAGS="-target x86_64-apple-macos10.12" && make
 
-else # ($(UNAME_S),???)
+else # ($(UNAME_S),Linux)
 build-openssl: setup-openssl
-	cd $(OPENSSL_BIN_PATH) && ../../openssl/Configure && make
+	cd $(OPENSSL_BIN_PATH) && ../../openssl/Configure && make build_libs
 	cd $(OPENSSL_BIN_PATH) && cp -afv ../../openssl/include .
 endif # ($(UNAME_S),???)
 
